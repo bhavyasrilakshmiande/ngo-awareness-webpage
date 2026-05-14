@@ -16,171 +16,307 @@ font-family:Arial,sans-serif;
 
 body{
 background:#f5f5f5;
+color:#222;
 }
 
 header{
-background:white;
-padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:15px 30px;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-header img{
-width:80px;
+.logo{
+height:60px;
+}
+
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:#222;
+font-weight:600;
+font-size:14px;
+}
+
+.donate-btn{
+background:#18c77a;
+padding:10px 18px;
+border-radius:5px;
+color:white;
 }
 
 .hero{
 height:500px;
-background:url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200') center/cover;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('hero.jpg.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
+padding:60px;
 color:white;
 }
 
 .hero-content{
-background:rgba(0,0,0,0.5);
-padding:20px;
-border-radius:10px;
+max-width:500px;
 }
 
 .hero h1{
-font-size:45px;
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#18c77a;
 }
 
 .hero p{
-margin-top:15px;
-font-size:18px;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.hero-buttons button{
+padding:12px 25px;
+margin-right:10px;
+border:none;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.join{
+background:#18c77a;
+color:white;
+}
+
+.volunteer{
+background:black;
+color:white;
+border:1px solid white;
+}
+
+.donate{
+background:transparent;
+border:1px solid white !important;
+color:white;
 }
 
 .section{
-padding:40px 20px;
+padding:70px 8%;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+.small-title{
+color:#18c77a;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.about h2{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.about p{
+line-height:1.9;
+margin-bottom:20px;
+}
+
+.green-btn{
+background:#18c77a;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+font-weight:bold;
 }
 
 .title{
 text-align:center;
-font-size:35px;
-color:#00c98d;
-margin-bottom:30px;
+margin-bottom:40px;
+font-size:40px;
 }
 
-.about{
-background:white;
-padding:25px;
-border-radius:15px;
-line-height:1.8;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+.title span{
+color:#18c77a;
 }
 
 .projects{
 display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
 .card{
 background:white;
-border-radius:15px;
+border-radius:10px;
 overflow:hidden;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
+text-align:center;
 }
 
 .card img{
 width:100%;
-height:220px;
+height:180px;
 object-fit:cover;
 }
 
-.card-content{
-padding:20px;
+.card h3{
+margin:15px 0;
+color:#18c77a;
 }
 
-.card h3{
-color:#00c98d;
-margin-bottom:10px;
-font-size:28px;
+.card p{
+padding:0 15px 20px;
+font-size:14px;
+line-height:1.6;
 }
 
 .impact{
-background:#111;
+background:black;
 color:white;
-padding:50px 20px;
-text-align:center;
+padding:60px 8%;
 }
 
-.stats{
+.impact-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
-margin-top:30px;
+margin-top:40px;
 }
 
-.stat{
-background:#1d1d1d;
-padding:20px;
-border-radius:15px;
+.impact-box{
+background:#111;
+padding:40px;
+text-align:center;
+border-radius:10px;
 }
 
-.stat h2{
-color:#00c98d;
-font-size:35px;
+.impact-box h2{
+font-size:40px;
+color:#18c77a;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
 .gallery img{
 width:100%;
-height:160px;
+height:200px;
 object-fit:cover;
 border-radius:10px;
 }
 
-.cta{
-background:#00c98d;
+.mission{
+background:#18c77a;
+padding:50px 8%;
 color:white;
 text-align:center;
-padding:60px 20px;
 }
 
-.buttons{
+.mission h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.mission-buttons{
 display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:25px;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
 }
 
-.buttons button{
-padding:15px;
+.mission-buttons button{
+padding:15px 30px;
 border:none;
-border-radius:10px;
-font-size:18px;
+border-radius:5px;
 font-weight:bold;
+font-size:16px;
 }
 
 footer{
 background:#111;
 color:white;
-padding:40px 20px;
-text-align:center;
+padding:50px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+footer h3{
+margin-bottom:20px;
+color:#18c77a;
+}
+
+footer p{
 line-height:2;
 }
 
-</style>
+@media(max-width:768px){
 
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
+.hero{
+height:auto;
+padding:50px 20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-<img src="https://inamigosfoundation.org.in/wp-content/uploads/2021/09/logo.png">
+<img src="logo.png.jpg" class="logo">
 
-<h3>InAmigos</h3>
+<nav>
+<a href="#">Home</a>
+<a href="#">About Us</a>
+<a href="#">Projects</a>
+<a href="#">Impact</a>
+<a href="#">Gallery</a>
+<a href="#">Events</a>
+<a href="#">Contact</a>
+<a href="#" class="donate-btn">Donate Now</a>
+</nav>
 
 </header>
 
@@ -188,35 +324,47 @@ line-height:2;
 
 <div class="hero-content">
 
-<h1>Uniting Minds For Change</h1>
+<h1>Uniting Minds <br> For <span>Change</span></h1>
 
 <p>
-Creating impact through education,
-women empowerment, animal welfare
-and environmental sustainability.
+InAmigos Foundation works towards creating an inclusive society through education, women empowerment, animal welfare, environmental sustainability and community support.
 </p>
+
+<div class="hero-buttons">
+<button class="join">Join Us</button>
+<button class="volunteer">Volunteer</button>
+<button class="donate">Donate</button>
+</div>
 
 </div>
 
 </section>
 
 <section class="section">
-
-<h2 class="title">About Us</h2>
 
 <div class="about">
 
-<p>
-InAmigos Foundation is a Section 8 registered
-non-profit organization founded in 2020.
+<div>
 
-The NGO works for education,
-women empowerment,
-animal welfare,
-food distribution,
-environmental sustainability
-and social welfare programs.
+<p class="small-title">ABOUT US</p>
+
+<h2>InAmigos Foundation</h2>
+
+<p>
+InAmigos Foundation is a Section 8 registered non-profit organization founded on September 23, 2020. We are committed to bringing positive change in society through our key initiatives in education, women empowerment, animal welfare, environmental conservation and community support.
 </p>
+
+<p>
+With a strong network of volunteers and partners, we strive to create a more inclusive, compassionate and empowered society.
+</p>
+
+<button class="green-btn">Know More About Us</button>
+
+</div>
+
+<div>
+<img src="kids.jpg.jpg">
+</div>
 
 </div>
 
@@ -224,56 +372,38 @@ and social welfare programs.
 
 <section class="section">
 
-<h2 class="title">Our Projects</h2>
+<h2 class="title"><span>OUR</span> PROJECTS</h2>
 
 <div class="projects">
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200">
-
-<div class="card-content">
-
-<h3>BachpanShala</h3>
-
-<p>
-Helping children through quality education.
-</p>
-
-</div>
-
+<img src="bachpanshala.jpg.jpg">
+<h3>Project BachpanShala</h3>
+<p>Providing education and learning support for underprivileged children.</p>
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200">
-
-<div class="card-content">
-
-<h3>Jeev</h3>
-
-<p>
-Animal feeding and protection drives.
-</p>
-
-</div>
-
+<img src="udaan.jpg.jpg">
+<h3>Project Udaan</h3>
+<p>Empowering women through skill development and financial independence.</p>
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200">
-
-<div class="card-content">
-
-<h3>Prakriti</h3>
-
-<p>
-Environmental awareness and tree plantation.
-</p>
-
+<img src="jeev.jpg.jpg">
+<h3>Project Jeev</h3>
+<p>Animal rescue, feeding and protection drives for stray animals.</p>
 </div>
 
+<div class="card">
+<img src="prakriti.jpg.jpg">
+<h3>Project Prakriti</h3>
+<p>Environmental sustainability through tree plantation and awareness programs.</p>
+</div>
+
+<div class="card">
+<img src="seva.jpg.jpg">
+<h3>Project Seva</h3>
+<p>Providing food and clothing support to needy communities.</p>
 </div>
 
 </div>
@@ -282,26 +412,26 @@ Environmental awareness and tree plantation.
 
 <section class="impact">
 
-<h2 class="title">Our Impact</h2>
+<h2 class="title"><span>OUR</span> IMPACT</h2>
 
-<div class="stats">
+<div class="impact-grid">
 
-<div class="stat">
+<div class="impact-box">
 <h2>30500+</h2>
 <p>Beneficiaries</p>
 </div>
 
-<div class="stat">
+<div class="impact-box">
 <h2>200+</h2>
 <p>Volunteers</p>
 </div>
 
-<div class="stat">
+<div class="impact-box">
 <h2>28</h2>
 <p>States</p>
 </div>
 
-<div class="stat">
+<div class="impact-box">
 <h2>4+</h2>
 <p>Major Causes</p>
 </div>
@@ -312,32 +442,29 @@ Environmental awareness and tree plantation.
 
 <section class="section">
 
-<h2 class="title">Gallery</h2>
+<h2 class="title"><span>GALLERY</span></h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200">
-
-<img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200">
-
-<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200">
-
-<img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1200">
+<img src="jeev.jpg.jpg">
+<img src="seva.jpg.jpg">
+<img src="bachpanshala.jpg.jpg">
+<img src="kids.jpg.jpg">
 
 </div>
 
 </section>
 
-<section class="cta">
+<section class="mission">
 
-<h2>Be Part Of Our Mission</h2>
+<h2>Be A Part Of Our Mission</h2>
 
-<div class="buttons">
+<p>Together we can create a better tomorrow.</p>
+
+<div class="mission-buttons">
 
 <button>Join Us</button>
-
 <button>Volunteer</button>
-
 <button>Donate Now</button>
 
 </div>
@@ -346,9 +473,50 @@ Environmental awareness and tree plantation.
 
 <footer>
 
+<div>
+
+<img src="logo.png.jpg" class="logo">
+
 <p>
-Ward No. 5, Sipat Ujwal Nagar,
-Bilaspur, Chhattisgarh
+Working across diverse projects and many ways — from education to care, from environment to empowerment.
+</p>
+
+</div>
+
+<div>
+
+<h3>Useful Links</h3>
+
+<p>
+Events<br>
+Volunteers<br>
+Gallery<br>
+Blog<br>
+Categories
+</p>
+
+</div>
+
+<div>
+
+<h3>Pages</h3>
+
+<p>
+About Us<br>
+Contact
+</p>
+
+</div>
+
+<div>
+
+<h3>Contact Us</h3>
+
+<p>
+Ward No. 5, Gram Post,<br>
+Sipat Ujwal Nagar,<br>
+Bilaspur, Chhattisgarh<br>
+Pin-Code: 495555
 </p>
 
 <p>
@@ -359,9 +527,7 @@ inamigosfoundation@gmail.com
 +91 6267309902
 </p>
 
-<p>
-© 2026 InAmigos Foundation
-</p>
+</div>
 
 </footer>
 
